@@ -12,7 +12,7 @@
 
 body {
   font-family: var(--font-raleway);
-  background: #212426;
+  background: #232222;
 }
 
 #app {
@@ -29,12 +29,15 @@ body {
 }
 
 .logo img {
-  width: 70%;
+  width: 100%;
   height: auto;
   display: block;
   margin: auto;
 }
-
+/*PIETRO ALTEROU*/
+.search img.icon{
+height: 50px;
+}
 .search {
   width: 70%;
   margin: 4rem 0 2rem;
@@ -57,10 +60,11 @@ body {
   background: #1f2123;
   font-size: 1.5rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .search img {
-  width: 35px;
+  width: 50px;
   height: 35px;
   cursor: pointer;
 }

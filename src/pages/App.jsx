@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
-import logo from "../assets/devflix.png";
+import logo from "../assets/WhatsApp Image 2023-08-31 at 16.50.01.jpeg";
+import iconSearch from"../assets/pixelarticons_menu.svg"
 import searchIcon from "../assets/search.svg";
+
 import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
 
 import "./App.css";
@@ -10,6 +12,8 @@ import Footer from "../components/footer/footer";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [searchDerb] = useState("");
+
   const [movies, setMovies] = useState([]);
 
   const apiKey = "e4d577fa";
@@ -37,6 +41,9 @@ const App = () => {
         <img src={logo} alt="" />
       </div>
       <div className="search">
+        <img className="icon" src={iconSearch} 
+        alt="Icone de Variedade de Filmes" 
+        onClick={() => searchMovies(searchDerb)} />
         <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
