@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import logo from "../assets/WhatsApp Image 2023-08-31 at 16.50.01.jpeg";
-import iconSearch from"../assets/pixelarticons_menu.svg"
+// import iconSearch from"../assets/pixelarticons_menu.svg"
 import searchIcon from "../assets/search.svg";
 
 import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -9,11 +9,11 @@ import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
 import "./App.css";
 import MovieCard from "../components/movieCard/movieCard";
 import Footer from "../components/footer/footer";
+import Menu from "../menu/menu";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchDerb] = useState("");
-
+  const[isMenu, setIsMenu] =useState(false)
   const [movies, setMovies] = useState([]);
 
   const apiKey = "e4d577fa";
@@ -35,15 +35,24 @@ const App = () => {
     e.key === "Enter" && searchMovies(searchTerm);
   };
   // fetch(apiUrl).then((response) => response.json()).then((data) => console.log(data));
+  const toggleMenu =()=>{
+    setIsMenu(!isMenu)
+  }
   return (
     <div id="app">
       <div className="logo">
         <img src={logo} alt="" />
       </div>
+      <div>
+        <div className="searchBar">
+      <ion-icon name="menu" onClick={toggleMenu}/>
+      {isMenu &&<Menu click={toggleMenu}/>}
+      <ul onClick={(e) => e.stopPropagation()}></ul>
+        </div>
       <div className="search">
-        <img className="icon" src={iconSearch} 
+        {/* <img className="icon" src={iconSearch} 
         alt="Icone de Variedade de Filmes" 
-        onClick={() => searchMovies(searchDerb)} />
+        onClick={() => searchMovies(searchDerb)} /> */}
         <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
@@ -55,6 +64,7 @@ const App = () => {
           alt="Icone de pesquisa"
           onClick={() => searchMovies(searchTerm)}
         />
+      </div>
       </div>
       {movies?.length > 0 ? (
         <div className="container">

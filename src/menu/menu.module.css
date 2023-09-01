@@ -1,0 +1,37 @@
+.menuBand{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    background: #ffffff00;
+    top: 0;
+    left: 0;
+}
+.menuBand ul{
+    position: absolute;
+    top: 20em;
+    left: 36em;
+    border-radius: 1em;
+    background: #f9d3b4;
+    width: 15em;
+    height: 18em;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menuBand ul li{
+    list-style: none;
+}
+.menuBand ul li:hover{
+background: #1f2123;
+color: #f9d3b4;
+}
+
+.menuBand ul li a{
+    text-decoration: none;
+    color: #1f2123;
+    font-size: large;
+    font-weight: bolder;
+}
