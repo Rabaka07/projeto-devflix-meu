@@ -47,7 +47,6 @@ const App = () => {
         <div className="searchBar">
       <ion-icon name="menu" onClick={toggleMenu}/>
       {isMenu &&<Menu click={toggleMenu}/>}
-      <ul onClick={(e) => e.stopPropagation()}></ul>
       <div className="search">
         {/* <img className="icon" src={iconSearch} 
         alt="Icone de Variedade de Filmes" 

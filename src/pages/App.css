@@ -52,6 +52,7 @@ margin-left: 10px;
 .searchBar ion-icon{
   color: aliceblue;
   font-size: 4em;
+  cursor: pointer;
   height: 2em;
 }
 .search {

@@ -1,7 +1,7 @@
 .fundoMenu{
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     background: #ffffff00;
     top: 0;
@@ -13,13 +13,13 @@
 }
 .menuBand ul{
     position: absolute;
-    top: -1em;
-    left: 0;
+    top: -1.3em;
+    left: -1em;
     border-radius: 1em;
     background: #1f2123;
     width: 15em;
     height: 18em;
-    padding: 0;
+    padding: 0em;
     display: flex;
     flex-direction: column;
     align-items: center;

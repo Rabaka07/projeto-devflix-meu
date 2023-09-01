@@ -3,8 +3,8 @@ import styles from "./menu.module.css"
 const Menu =({click})=>{
     return(
         <>
-        <div className={StyleSheetList.fundoMenu}></div>
-        <div className={styles.menuBand} onClick={click}>
+        <div className={styles.fundoMenu} onClick={click}></div>
+        <div className={styles.menuBand}>
             <ul>
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Séries</a></li>
@@ -13,6 +13,7 @@ const Menu =({click})=>{
             </ul>
         </div>
         </>
-    )
-}
+    );
+};
+
 export default Menu;
