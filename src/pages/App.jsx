@@ -43,27 +43,27 @@ const App = () => {
       <div className="logo">
         <img src={logo} alt="" />
       </div>
-      <div>
+      <div className="linha">
         <div className="searchBar">
       <ion-icon name="menu" onClick={toggleMenu}/>
       {isMenu &&<Menu click={toggleMenu}/>}
       <ul onClick={(e) => e.stopPropagation()}></ul>
-        </div>
       <div className="search">
         {/* <img className="icon" src={iconSearch} 
         alt="Icone de Variedade de Filmes" 
-        onClick={() => searchMovies(searchDerb)} /> */}
+      onClick={() => searchMovies(searchDerb)} /> */}
         <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleKeyPress}
           placeholder="Pesquise Aqui"
-        />
+          />
         <img
           src={searchIcon}
           alt="Icone de pesquisa"
           onClick={() => searchMovies(searchTerm)}
-        />
+          />
+          </div>
       </div>
       </div>
       {movies?.length > 0 ? (

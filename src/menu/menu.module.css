@@ -1,4 +1,4 @@
-.menuBand{
+.fundoMenu{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -7,12 +7,16 @@
     top: 0;
     left: 0;
 }
+.menuBand{
+    position: relative;
+    z-index: 1000;
+}
 .menuBand ul{
     position: absolute;
-    top: 20em;
-    left: 36em;
+    top: -1em;
+    left: 0;
     border-radius: 1em;
-    background: #f9d3b4;
+    background: #1f2123;
     width: 15em;
     height: 18em;
     padding: 0;
@@ -20,7 +24,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    animation: fadeOut 0.2s;
 }
+@keyframes fadeOut {
+    from {
+      width: 0;
+    }
+    to {
+      width: 15em;
+    }
+  }
 .menuBand ul li{
     list-style: none;
 }
@@ -31,7 +44,7 @@ color: #f9d3b4;
 
 .menuBand ul li a{
     text-decoration: none;
-    color: #1f2123;
+    color: #BB2121;
     font-size: large;
     font-weight: bolder;
 }
